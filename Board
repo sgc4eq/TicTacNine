@@ -1,0 +1,29 @@
+import java.awt.BasicStroke;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+
+public class Board extends JFrame{
+	
+	public Board() {
+		initUI();
+	}
+	
+	private void initUI() {
+		DrawBoard dpnl = new DrawBoard();
+        add(dpnl);
+		setTitle("Tic-Tac-Nine");
+		setSize(800,700);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		Board b = new Board();
+		b.setVisible(true);
+
+	}
+
+}
